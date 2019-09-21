@@ -23,11 +23,11 @@ if [ $ARCH == "darwin" ]; then
     sed -i "" "s/-ggdb //;" config.mk
     make -j$J CXX="$CXX" \
               CXXFLAGS="-I/tmp/conda/include -std=c++11" LDFLAGS="-L/tmp/conda/lib" \
-              SUBDIRS="icebox icepack icemulti icepll icetime icebram"
+              SUBDIRS="icebox icepack icemulti icepll icetime icebram iceprog"
 else
   sed -i "s/-ggdb //;" config.mk
   make -j$J CXX="$CXX" STATIC=1 \
-            SUBDIRS="icebox icepack icemulti icepll icetime icebram"
+            SUBDIRS="icebox icepack icemulti icepll icetime icebram iceprog"
 fi
 
 TOOLS="icepack icemulti icepll icetime icebram iceprog"
