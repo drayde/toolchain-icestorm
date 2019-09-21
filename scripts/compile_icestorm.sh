@@ -30,7 +30,7 @@ else
             SUBDIRS="icebox icepack icemulti icepll icetime icebram"
 fi
 
-TOOLS="icepack icemulti icepll icetime icebram"
+TOOLS="icepack icemulti icepll icetime icebram iceprog"
 
 EXE_O=
 if [ -f icepack/icepack.exe ]; then
